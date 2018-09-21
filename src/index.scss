@@ -1,0 +1,200 @@
+$black-form-font: #A2BAD4;
+$black-form-bg: #1B2137;
+$black-form-border: #404764;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+/*定义滚动条的轨道，内阴影及圆角*/
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(230, 230, 230, 0.05);
+}
+*:hover::-webkit-scrollbar-track {
+    background-color: rgba(230, 230, 230, 0.5);
+}
+
+/*定义滑块，内阴影及圆角*/
+*::-webkit-scrollbar-thumb {
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    background-color: rgba(216, 216, 216, 0.9);
+    transition: background-color 1s;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(216, 216, 216, 1);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(190, 190, 190, 1);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: rgba(160, 160, 160, 1);
+}
+
+.ant-tabs {
+    overflow-y: scroll;
+}
+
+.blackTable {
+    .ant-table-header {
+        background: #272E48;
+        .ant-table-thead {
+            overflow: hidden;
+            >tr {
+                >th {
+                    padding: 10px 10px;
+                    background: #272E48;
+                    color: #6C7A95;
+                    font-size: 12px;
+                    border-bottom: 1px solid #313751;
+                }
+            }
+        }
+    }
+    .ant-table-body {
+        .ant-table-tbody {
+            >tr {
+                background: #1B2137;
+                cursor: pointer;
+                &:hover {
+                    background: #6C7A95;
+                }
+                >td {
+                    line-height: 38px;
+                    padding: 0 10px;
+                    color: #8CA6BF;
+                    font-size: 12px;
+                    border-bottom: 1px solid #313751;
+                    a {
+                        display: inline-block;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .ant-table-placeholder {
+        color: #6C7A95;
+        background: #1B2137;
+        border-bottom: 1px solid #313751;
+    }
+}
+
+.blackPopup {
+    .ant-modal-content {
+        background: #1E243A;
+    }
+    .ant-modal-header  {
+        background: #1E243A;
+        border-bottom: 1px solid #3E4766;
+        .ant-modal-title {
+            color: #A2BAD4;
+        }
+    }
+    .ant-modal-close {
+        color: #A2BAD4;
+    }
+}
+
+.blackForm {
+    /*输入框*/
+    .ant-input {
+        border: 1px solid $black-form-border;
+        border-radius: 0px;
+        background: $black-form-bg;
+        color: $black-form-font;
+    }
+    /*搜索输入框*/
+    .ant-input-search {
+        background: $black-form-bg;
+        border-radius: 0px;
+        .ant-input {
+            background: $black-form-bg;
+            border: 1px solid $black-form-border;
+            border-radius: 0px;
+        }
+        .ant-input-search-button  {
+            background: $black-form-bg;
+            border-radius: 0px;
+            border-color: $black-form-border;
+        }
+    }
+    /*下拉框*/
+    .ant-select {
+        color: $black-form-font;
+    }
+    .ant-select-selection {
+        color: $black-form-font;
+        background: $black-form-bg;
+        border: 1px solid $black-form-border;
+        border-radius: 0px;
+    }
+    .ant-select-arrow {
+        color: $black-form-font;
+    }
+    .ant-input:focus,
+    .ant-select-selection:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    /*下拉多选框*/
+    .ant-select-selection--multiple .ant-select-selection__choice {
+        color: $black-form-font;
+        background: #485079;
+        border: none;
+    }
+    /*label*/
+    .ant-form-item-label  {
+        label {
+            color: $black-form-font;
+        }
+    }
+    /*日期选择*/
+    .ant-calendar-picker-icon:after {
+        color: $black-form-font;
+    }
+    /*按钮*/
+    .ant-btn {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background: $black-form-bg;
+        color: $black-form-font;
+        border-color: $black-form-border;
+        &:hover,
+        &:active,
+        &:focus {
+            background: $black-form-bg;
+        }
+    }
+    /*复选框*/
+    .ant-checkbox-wrapper {
+        color: $black-form-font;
+    }
+    .ant-checkbox {
+        background: $black-form-bg;
+    }
+    .ant-checkbox-inner {
+        background: $black-form-bg;
+    }
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+

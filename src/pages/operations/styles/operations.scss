@@ -1,0 +1,19 @@
+$prefix: 'operations-ctrl';
+
+.#{$prefix}- {
+    &container {
+        position: relative;
+        width: 1200px;
+        box-sizing: border-box;
+        margin: auto;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            width: 100%;
+        }
+    }
+}

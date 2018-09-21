@@ -1,0 +1,83 @@
+$prefix:'flow-login';
+
+.#{$prefix}- {
+    &container{
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &header {
+        height:50px;
+        line-height: 50px;
+        width: 100%;
+        position: fixed;
+        top:  0px;
+        animation:header_fadeIn 0.6s;
+        .logo{
+
+            margin-left:30px;
+            height:25px;
+            width: auto;//缩放
+        }
+    }
+
+    @keyframes header_fadeIn
+    {
+        0%   {top: -50px;}
+        50%   {top: -50px;}
+        100% {top:0px}
+    }
+
+    &header_fadeOut{
+        animation:header_fadeOut 0.4s;
+    }
+
+    @keyframes header_fadeOut{
+        0%   {top: 0px;}
+        50%   {top: 0px;}
+        100% {top:-50px}
+    }
+
+    &form {
+        //width: 300px;
+        padding: 20px 40px 10px 40px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        animation:form_fadeIn 0.3s;
+
+        &_crystal{//水晶半透明黑
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .login-form {
+            max-width: 300px;
+        }
+        .login-form-forgot {
+            float: right;
+        }
+        .login-form-button {
+            width: 100%;
+        }
+    }
+
+    @keyframes form_fadeIn
+    {
+        0%   {left: 0px;}
+
+        100% {left:50%}
+    }
+
+
+    &form_fadeOut{
+        animation:form_fadeOut 0.4s;
+    }
+    @keyframes form_fadeOut
+    {
+        0%   {left: 50%;}
+
+        100% {left:100%}
+    }
+}
+
